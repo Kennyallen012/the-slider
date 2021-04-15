@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New Image Slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #container {
+            display: block;
+            position: relative;
+            top: 30vh;
+            margin: 0 auto;
+            /* width: 367px;
+            height: 267px; */
+        }
+
+        #wrapper {
+            margin: 0 auto;
+            width: 367px;
+            height: 267px;
+            overflow: hidden;
+        }
+
+        img {
+            margin: 0 auto;
+            position: relative;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        /* ......KeyFrames..... */
+        @keyframes slide {
+            0% {
+                bottom: 0px;
+            }
+
+            25% {
+                bottom: 272px;
+            }
+
+            50% {
+                bottom: 544px;
+            }
+
+            75% {
+                bottom: 818px;
+            }
+
+            100% {
+                bottom: 1088px;
+            }
+        }
+
+        .slide {
+            animation: slide 12s infinite;
+            animation-delay: 3s
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <img class="slide" src="https://picsum.photos/367/267?random=1">
+            <img class="slide" src="https://picsum.photos/367/267?random=2">
+            <img class="slide" src="https://picsum.photos/367/267?random=3">
+            <img class="slide" src="https://picsum.photos/367/267?random=4">
+            <img class="slide" src="https://picsum.photos/367/267?random=1">
+        </div>
+        <h1>Refresh for new images!</h1>
+    </div>
+
+</body>
+
+</html>
